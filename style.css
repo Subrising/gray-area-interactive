@@ -146,3 +146,19 @@ section.blk{padding:32px 0}
 .hero-art img,.si-hero img{object-position:52% 45%}
 @media (min-width:700px){.hero-art img{object-position:50% 45%}}
 .pip{width:100%;max-width:720px;height:auto;image-rendering:auto}
+
+/* waitlist form (30 Oct): no JS needed, posts to Kit; messages show through :target */
+.wl{margin:20px 0 0;max-width:520px}
+.wl-h{font:700 26px/30px "Barlow Condensed",Barlow,sans-serif;margin:0 0 8px}
+.wl-row{display:flex;flex-wrap:wrap;gap:8px}
+.wl-lab{flex:0 0 100%;font:600 16px/22px Barlow,sans-serif}
+.wl input[type=email]{flex:1 1 220px;min-width:0;min-height:48px;padding:0 14px;font:18px Barlow,sans-serif;background:#fff;color:#2a2420;border:2px solid #2a2420;border-radius:0}
+.wl input[type=email]:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wl .btn{cursor:pointer;min-width:48px;flex:0 0 auto}
+.wl-note{font-size:16px;line-height:24px;margin:8px 0 0;color:var(--muted)}
+.wl-note a{display:flex;align-items:center;width:fit-content;min-height:48px;color:var(--amber)!important;font-weight:600}
+.wl-err{margin:8px 0 0;padding:8px 12px;background:#ffd9cf;color:#7a1a05;font-weight:600;border-left:6px solid #c23a1c}
+.wl-err[hidden]{display:none}
+.wl-msg{display:none;margin:16px 0 0;padding:12px 14px;max-width:520px;background:var(--mint);color:#16181b;font:600 18px/26px Barlow,sans-serif;border-left:6px solid #1f7a5a}
+.wl-msg:target{display:block}
+.policy p a{display:inline-block;padding:13px 0;margin:-13px 0}

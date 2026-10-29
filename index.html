@@ -42,7 +42,22 @@
 <a class="go" href="/gray-area-interactive/shipit/">See the game</a>
 </div></div>
 </div></section>
+<section class="studio wl-home"><div class="wrap">
+<form class="wl" action="https://app.kit.com/forms/10114351/subscriptions" method="post" aria-labelledby="wl-h3">
+<h2 class="wl-h" id="wl-h3">Join the waitlist</h2>
+<div class="wl-row"><label class="wl-lab" for="wl-email3">Email address</label>
+<input id="wl-email3" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+<button class="btn" type="submit">Join the waitlist</button></div>
+<p class="wl-note">One email when Ship It launches. Leave any time. <a href="/gray-area-interactive/shipit/privacy/#waitlist">How we use your email</a></p>
+<p class="wl-err" role="alert" hidden>Enter a full email address, such as you@example.com.</p>
+</form>
+</div></section>
 </main>
+<script>
+(function(){document.querySelectorAll("form.wl").forEach(function(f,n){var i=f.querySelector("input"),e=f.querySelector(".wl-err");e.id="wl-err"+n;
+i.addEventListener("invalid",function(ev){ev.preventDefault();e.hidden=false;i.setAttribute("aria-invalid","true");i.setAttribute("aria-describedby",e.id)});
+i.addEventListener("input",function(){e.hidden=true;i.removeAttribute("aria-invalid")})})})();
+</script>
 <footer class="site-footer"><div class="wrap">
 <div>
 <div><a class="slot" href="/gray-area-interactive/" aria-label="Gray Area Interactive, home"><img src="/gray-area-interactive/assets/logo/logo-full.svg" width="260" height="63" alt="Gray Area Interactive"></a>
