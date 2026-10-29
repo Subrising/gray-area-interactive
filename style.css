@@ -1,0 +1,148 @@
+@font-face{font-family:Barlow;font-weight:400;font-display:swap;src:url(fonts/Barlow-Regular.woff2) format("woff2")}
+@font-face{font-family:Barlow;font-weight:600;font-display:swap;src:url(fonts/Barlow-SemiBold.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-weight:700;font-display:swap;src:url(fonts/BarlowCondensed-Bold.woff2) format("woff2")}
+@font-face{font-family:LittleGoods;font-display:swap;src:url(fonts/LittleGoods.woff2) format("woff2")}
+:root{--graphite:#16181b;--panel:#23272c;--line:#3a4048;--text:#eceae4;--muted:#a4a8ad;--amber:#f2a900;--cream:#fffaf0;--lip:#f1dfc8;--ctext:#2a2420;--cmuted:#6b5e55;--mint:#b2ebd5;--sun:#fbdc78;--coral:#f7a39a}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--graphite);color:var(--text);font:400 18px/28px Barlow,system-ui,sans-serif;overflow-wrap:break-word}
+body.cream{background:var(--cream);color:var(--ctext)}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--amber);text-underline-offset:3px}
+.cream main a{color:var(--ctext)}
+a:focus-visible,button:focus-visible,.strip:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.cream main a:focus-visible,.cream main button:focus-visible,.cream .strip:focus-visible{outline-color:var(--ctext)}
+h1,h2{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;margin:0;line-height:1.05}
+h1{font-size:clamp(40px,7vw,72px)}
+h2{font-size:clamp(28px,4vw,36px);line-height:1.1}
+p{margin:0 0 16px;max-width:66ch}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip:focus{width:auto;height:auto;clip-path:none;left:8px;top:8px;z-index:9;background:var(--amber);color:var(--graphite);padding:12px 16px;font-weight:600}
+/* shell */
+.site-header{background:var(--graphite);color:var(--text);border-bottom:1px solid var(--line)}
+.site-header .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.slot{display:flex;align-items:center;gap:8px;min-height:48px;color:var(--text);text-decoration:none;font-weight:600;font-size:16px;line-height:18px}
+.slot img{width:40px;height:40px;flex:none;object-fit:contain}
+.slot span{max-width:140px}
+.nav{display:flex;align-items:center}
+.nav a{display:inline-flex;align-items:center;min-height:48px;min-width:48px;padding:0 8px;color:var(--text);text-decoration:none;font-weight:600;font-size:15px;position:relative;transition:color .15s}
+.nav a:hover,.foot-links a:hover{color:var(--amber)}
+.nav a[aria-current]::after{content:"";position:absolute;left:8px;right:8px;bottom:6px;height:2px;background:var(--amber)}
+.site-footer{background:var(--graphite);color:var(--text);border-top:1px solid var(--line);padding:24px 0 16px}
+.site-footer .wrap{display:flex;flex-direction:column;gap:4px}
+.foot-links{display:flex;flex-wrap:wrap}
+.foot-links a{display:inline-flex;align-items:center;min-height:48px;min-width:48px;font-size:16px;font-weight:600;color:var(--amber);padding:0 16px 0 0;text-decoration:underline;text-underline-offset:3px}
+.site-footer small{display:block;color:var(--muted);font-size:16px;line-height:24px;padding:4px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--amber);color:var(--graphite)!important;font:600 18px Barlow,sans-serif;text-decoration:none;border:0;transition:background-color .15s}
+.btn:hover{background:#ffc233}
+/* home */
+.hero{height:min(78vh,720px);min-height:480px;display:flex;flex-direction:column;background:var(--graphite)}
+.hero-art{flex:1;min-height:0}
+.hero-art picture,.hero-art img{display:block;width:100%;height:100%}
+.hero-art img{object-fit:cover;object-position:10% 85%;}
+.hero-band{padding:20px 0 24px;background:var(--graphite)}
+.hero-band h1{margin-bottom:16px;max-width:16ch}
+.studio{background:var(--panel);padding:32px 0}
+.studio p{font-size:19px}
+.tile{display:grid;gap:16px;margin-top:24px;border:1px solid var(--line);background:var(--graphite)}
+.tile>img{width:100%;height:auto;aspect-ratio:2340/1020;object-fit:cover;}
+.tile-body{padding:0 16px 16px}
+.tile-body h2{margin-bottom:8px}
+.tile-body .row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.tile-body .row img{height:40px;width:auto}
+.tile-body .muted{color:var(--muted);margin:0}
+.tile-body a.go{display:inline-flex;align-items:center;min-height:48px;font-weight:600}
+/* game panel look: edge, lip, hard shadow */
+.gpanel{background:var(--cream);border:3px solid var(--ctext);box-shadow:inset 0 -4px 0 var(--lip),4px 4px 0 var(--ctext);color:var(--ctext)}
+.logo-panel{display:inline-block;padding:12px 16px 16px}
+.logo-panel .t1{font-family:LittleGoods,Barlow,sans-serif;font-size:44px;line-height:66px;display:block}
+.logo-panel .t2{font-family:LittleGoods,Barlow,sans-serif;font-size:22px;line-height:33px;display:block;color:var(--cmuted)}
+.si-hero{position:relative;background:var(--graphite);border-bottom:3px solid var(--ctext)}
+.si-hero img{width:100%;height:380px;object-fit:cover;object-position:8% 100%;}
+.si-hero .logo-panel{position:absolute;left:20px;top:20px}
+.si-intro{padding:28px 20px 8px}
+.si-intro .sub{font-family:LittleGoods,Barlow,sans-serif;font-size:22px;line-height:33px;margin:0 0 8px}
+.promo{font-size:19px}
+.badge-block{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 0;margin:8px 0 16px}
+.badge-block img{height:48px;width:auto}
+.badge-block span{font-weight:600}
+section.blk{padding:32px 0}
+.blk h2{margin-bottom:16px;max-width:30ch}
+.feats{display:grid;gap:24px;margin-top:24px}
+.feat{padding:0 0 16px}
+.feat img{width:100%;height:auto;aspect-ratio:2340/1020;object-fit:cover;border-bottom:3px solid var(--ctext);}
+.feat h3{font:700 28px/30px "Barlow Condensed",sans-serif;margin:16px 16px 8px}
+.feat p{margin:0 16px;color:var(--cmuted);font-size:17px;line-height:26px}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;margin:0;scrollbar-width:thin}
+.strip figure{flex:0 0 86%;margin:0;scroll-snap-align:start}
+.strip img{width:100%;height:auto;aspect-ratio:2796/1290;border:3px solid var(--ctext);background:#3b2c4d}
+.ctl{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:8px}
+.ctl button{width:48px;height:48px;background:var(--cream);border:3px solid var(--ctext);box-shadow:inset 0 -4px 0 var(--lip),3px 3px 0 var(--ctext);font:600 22px Barlow,sans-serif;color:var(--ctext);cursor:pointer}
+.ctl output{font-family:LittleGoods,Barlow,sans-serif;font-size:22px;line-height:33px;min-width:88px;text-align:center}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.facts li{font-family:LittleGoods,Barlow,sans-serif;font-size:22px;line-height:33px;padding:4px 12px;border:3px solid var(--ctext);color:var(--ctext)}
+.facts li:nth-child(1){background:var(--mint)}.facts li:nth-child(2){background:var(--sun)}.facts li:nth-child(3){background:var(--coral)}.facts li:nth-child(4){background:var(--lip)}
+.facts-links{display:flex;gap:16px;flex-wrap:wrap}
+.facts-links a{display:inline-flex;align-items:center;min-height:48px;min-width:48px;font-weight:600}
+/* support / privacy */
+.page{padding:40px 20px 48px}
+.page h1{margin-bottom:16px}
+.qa{display:grid;gap:16px;margin:32px 0 0}
+.qa div{background:var(--panel);border:1px solid var(--line);padding:16px}
+.qa h2{font-size:28px;margin-bottom:6px}
+.qa p{margin:0}
+.pip{width:260px;height:auto;margin-top:32px;image-rendering:pixelated;border:1px solid var(--line)}
+.policy{padding:40px 20px 56px}
+.policy .col{max-width:62ch;margin:0 auto}
+.policy h1{font-size:clamp(36px,6vw,56px);margin-bottom:8px}
+.policy .date{color:var(--cmuted);margin-bottom:20px}
+.callout{padding:16px 20px;margin:0 0 24px;font:700 36px/38px "Barlow Condensed",sans-serif}
+.policy ul{margin:0 0 16px;padding-left:24px}
+.policy li{margin-bottom:4px}
+@media (max-width:399px){
+ .site-header .wrap{padding:0 8px;gap:4px}
+ .slot{gap:6px}
+ .slot span{font-size:13px;line-height:15px;max-width:76px}
+ .nav a{padding:0 6px}
+}
+@media (min-width:700px){
+ .hero-band h1{max-width:24ch}
+ .hero-art img{object-position:30% 75%}
+ body{font-size:19px;line-height:30px}
+ .wrap{padding-left:32px;padding-right:32px}
+ .si-intro,.page,.policy{padding-left:32px;padding-right:32px}
+ .nav a{padding:0 14px;font-size:17px}
+ .slot span{max-width:none;white-space:nowrap;font-size:17px;line-height:22px}
+ .tile{grid-template-columns:1fr 1fr;align-items:center}
+ .tile-body{padding:16px 16px 16px 0}
+ .feats{grid-template-columns:repeat(3,1fr)}
+ .strip figure{flex-basis:60%}
+ .si-hero img{height:480px}
+ .site-footer .wrap{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between}
+}
+@media (min-width:1100px){.strip figure{flex-basis:calc((100% - 32px)/3)}.si-hero img{height:560px}}
+@media (max-height:500px) and (orientation:landscape){
+ .hero{height:auto;min-height:0;flex-direction:row;align-items:stretch}
+ .hero-art{flex:0 0 50%;min-height:300px}
+ .hero-band{flex:1;padding:16px 24px}
+ .hero-band h1{font-size:36px}
+ .si-hero img{height:300px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.qa a{display:inline-flex;align-items:center;min-height:48px;color:var(--amber)}
+
+.slot picture{flex:none;display:block;line-height:0}
+.site-footer .slot img{width:260px;height:63px}
+@media (min-width:560px){.site-header .slot img{width:260px;height:63px}}
+.slot{min-width:48px;justify-content:center}.site-footer .slot{justify-content:flex-start}
+/* Opus check 24 Oct: align the logo art (5% built-in clear space) and the Ship It logo panel to the text column; keep inline Q&A links 48 px tall without a tall line gap */
+.site-footer .slot img{margin-left:-13px}
+@media (min-width:560px){.site-header .slot img{margin-left:-13px}}
+.si-hero .logo-panel{left:max(20px,calc((100% - 1120px)/2 + 20px))}
+@media (min-width:700px){.si-hero .logo-panel{left:max(32px,calc((100% - 1120px)/2 + 32px))}}
+.qa a{display:inline-block;padding:12px 0;margin:-12px 0;min-height:0}
+/* Opus fix round 24 Oct: wide room hero from frame 03 (whole room, desk and Pip near the centre); Pip crop fills the column */
+.hero-art img,.si-hero img{object-position:52% 45%}
+@media (min-width:700px){.hero-art img{object-position:50% 45%}}
+.pip{width:100%;max-width:720px;height:auto;image-rendering:auto}

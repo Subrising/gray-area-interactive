@@ -1,4 +1,155 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Ship It: AI Dev Tycoon</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.6 -apple-system,system-ui,sans-serif;max-width:42rem;margin:0 auto;padding:2rem 1.25rem;color:#1d1d1f;background:#fafafa}a{color:#0a58ca}h1{line-height:1.2}nav a{display:inline-block;padding:.75rem .5rem;min-height:48px;box-sizing:border-box}footer{margin-top:3rem;color:#666;font-size:.9rem}</style></head><body><nav><a href="/gray-area-interactive/">Home</a> <a href="/gray-area-interactive/shipit/">Ship It</a> <a href="/gray-area-interactive/support/">Support</a> <a href="/gray-area-interactive/shipit/privacy/">Privacy</a></nav>
-<h1>Ship It: AI Dev Tycoon</h1><p>Build an AI startup, ship products, survive the hype cycle and find the ending of your career.</p>
-<p>No ads. No accounts. No data collection.</p>
-<p><a href="privacy/">Privacy policy</a> · <a href="../support/">Support</a></p><footer>© 2026 Gray Area Interactive</footer></body></html>
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ship It: AI Dev Tycoon, coming soon</title>
+<meta name="description" content="Run a tiny dev studio from a kitchen table to the front page. Plan the build, spend the tokens, ship it. Coming soon. Follow @shipitgame.">
+<meta property="og:title" content="Ship It: AI Dev Tycoon, coming soon">
+<meta property="og:description" content="Run a tiny dev studio from a kitchen table to the front page. Plan the build, spend the tokens, ship it.">
+<meta property="og:image" content="/gray-area-interactive/assets/og.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="/gray-area-interactive/assets/favicon.ico" sizes="any">
+<link rel="icon" href="/gray-area-interactive/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/gray-area-interactive/assets/apple-touch-icon.png">
+<link rel="preload" href="/gray-area-interactive/shipit/media/teaser-fire-poster.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="/gray-area-interactive/fonts/LittleGoods.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/gray-area-interactive/style.css">
+<style>
+/* Ship It page v2 (29 Oct): page-only rules; the shared style.css stays as the GG-1067 candidate */
+.sx-hero{background:var(--graphite);color:var(--text);border-bottom:3px solid var(--ctext);overflow:hidden}
+.sx-hero .wrap{display:grid;gap:24px;padding-top:24px;padding-bottom:32px;align-items:center}
+.sx-copy{min-width:0}
+.sx-soon{display:inline-block;font:700 15px/20px Barlow,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--graphite);background:var(--sun);padding:4px 10px;margin:0 0 16px}
+.sx-hero h1{font-family:LittleGoods,Barlow,sans-serif;font-weight:400;font-size:clamp(48px,9vw,88px);line-height:1;margin:0 0 4px;color:var(--cream)}
+.sx-hero h1 small{display:block;font-size:.36em;line-height:1.4;color:var(--amber)}
+.sx-hook{font:700 clamp(26px,4.4vw,40px)/1.1 "Barlow Condensed",Barlow,sans-serif;margin:16px 0 12px;max-width:22ch;text-wrap:balance}
+.sx-sub{color:var(--muted);font-size:18px;line-height:28px;margin:0 0 20px;max-width:40ch}
+.sx-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.sx-cta .btn{gap:8px;padding:0 18px}
+.cream main .btn-ghost{padding:0 16px}
+.cream main .btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border:2px solid var(--amber);color:var(--amber);font:600 18px Barlow,sans-serif;text-decoration:none}
+.btn-ghost:hover{background:rgba(242,169,0,.12)}
+.sx-cta svg{width:20px;height:20px;flex:none}
+.sx-video{position:relative;justify-self:center;width:min(78vw,300px);aspect-ratio:9/16;background:#1b1530;border:3px solid var(--cream);box-shadow:6px 6px 0 var(--amber)}
+.sx-video video,.sx-video img{display:block;width:100%;height:100%;object-fit:cover}
+.sx-pause{position:absolute;right:8px;bottom:8px;width:48px;height:48px;display:grid;place-items:center;background:rgba(22,24,27,.82);color:var(--cream);border:2px solid var(--cream);cursor:pointer;padding:0}
+.sx-pause svg{width:20px;height:20px}
+.sx-pause[hidden]{display:none}
+.sx-feats{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.sx-feats li{padding:16px 16px 14px}
+.sx-feats b{display:block;font:700 26px/30px "Barlow Condensed",sans-serif;margin-bottom:4px}
+.sx-feats span{display:block;color:var(--cmuted);font-size:17px;line-height:26px}
+.sx-feats li:nth-child(1){border-top:8px solid var(--mint)}.sx-feats li:nth-child(2){border-top:8px solid var(--sun)}.sx-feats li:nth-child(3){border-top:8px solid var(--coral)}
+.sx-shots{display:grid;grid-auto-flow:column;grid-auto-columns:86%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;margin:0;list-style:none;scrollbar-width:thin}
+.sx-shots li{scroll-snap-align:start;margin:0}
+.sx-shots img{width:100%;height:auto;aspect-ratio:16/9;border:3px solid var(--ctext);background:#c9774f}
+.sx-shots p{font-size:16px;line-height:22px;margin:8px 0 0;color:var(--cmuted)}
+.sx-swipe{font-size:16px;color:var(--cmuted);margin:0 0 8px}
+.sx-end{background:var(--graphite);color:var(--text);text-align:left}
+.sx-end .wrap{padding-top:36px;padding-bottom:36px}
+.sx-end h2{color:var(--cream);margin-bottom:8px}
+.sx-end p{color:var(--muted)}
+.sx-end .sx-soon{color:var(--graphite)}
+.sx-small{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:16px}
+.cream main .sx-small a{display:inline-flex;align-items:center;min-height:48px;min-width:48px;color:var(--amber);font-weight:600}
+section.blk h2{margin-bottom:16px}
+@media (max-width:420px){.sx-hero .wrap{padding-top:16px;gap:20px}.sx-soon{margin-bottom:10px}.sx-hero h1{font-size:44px}.sx-hook{font-size:24px;margin:10px 0 8px}.sx-sub{font-size:17px;line-height:25px;margin-bottom:16px}}
+@media (min-width:700px){
+ .sx-feats{grid-template-columns:repeat(3,1fr)}
+ .sx-shots{grid-auto-flow:row;grid-template-columns:repeat(2,1fr);overflow:visible;padding:0}
+ .sx-swipe{display:none}
+}
+@media (min-width:900px){
+ .sx-hero{background:linear-gradient(90deg,var(--graphite) 38%,rgba(22,24,27,.72) 70%,rgba(22,24,27,.55)),url(/gray-area-interactive/assets/room-wide-1280.webp) 60% 50%/cover}
+ .sx-hero .wrap{grid-template-columns:1fr auto;gap:48px;padding-top:48px;padding-bottom:56px}
+ .sx-video{width:auto;height:min(72vh,600px);justify-self:end}
+}
+@media (min-width:1100px){.sx-shots{grid-template-columns:repeat(3,1fr)}}
+/* phone landscape: copy and clip side by side, clip fits the screen height */
+@media (max-height:500px) and (orientation:landscape){
+ .sx-hero .wrap{grid-template-columns:1fr auto;gap:24px;padding-top:16px;padding-bottom:16px}
+ .sx-video{width:auto;height:calc(100svh - 112px);min-height:220px}
+ .sx-hero h1{font-size:44px}.sx-hook{font-size:24px;margin:8px 0}.sx-sub{display:none}.sx-soon{margin-bottom:8px}
+}
+</style>
+</head>
+<body class="cream">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="slot" href="/gray-area-interactive/" aria-label="Gray Area Interactive, home"><picture><source media="(min-width:560px)" srcset="/gray-area-interactive/assets/logo/logo-full.svg" width="260" height="63"><img src="/gray-area-interactive/assets/logo/logo-mark.svg" width="40" height="40" alt="Gray Area Interactive"></picture></a>
+<nav class="nav" aria-label="Main"><a href="/gray-area-interactive/shipit/" aria-current="page">Ship It</a><a href="/gray-area-interactive/support/">Support</a><a href="/gray-area-interactive/shipit/privacy/">Privacy</a></nav>
+</div></header>
+<main id="main">
+<section class="sx-hero"><div class="wrap">
+<div class="sx-copy">
+<p class="sx-soon">Coming soon</p>
+<h1>Ship It<small>AI Dev Tycoon</small></h1>
+<p class="sx-hook">Run a tiny dev studio from a kitchen table to the front page.</p>
+<p class="sx-sub">Plan the build. Spend the tokens. Ship it. Then find out if the reviewers call it a Flop or Viral.</p>
+<div class="sx-cta">
+<a class="btn" href="https://www.instagram.com/shipitgame/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Follow @shipitgame</a>
+<a class="btn-ghost" href="https://www.youtube.com/@shipitgame" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>YouTube</a>
+</div>
+</div>
+<div class="sx-video">
+<video id="teaser" muted loop playsinline preload="none" poster="/gray-area-interactive/shipit/media/teaser-fire-poster.webp" width="540" height="960" aria-label="Teaser: the office is on fire, the AI agent fixes a typo. Ship It, coming soon.">
+<source src="/gray-area-interactive/shipit/media/teaser-fire-540.mp4" type="video/mp4">
+</video>
+<button class="sx-pause" id="pause" type="button" aria-label="Pause the teaser" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg></button>
+</div>
+</div></section>
+
+<section class="blk"><div class="wrap">
+<h2>You've got a laptop, a kettle, a cat called Pip, and a loan from Mum.</h2>
+<ul class="sx-feats">
+<li class="gpanel"><b>Plan, spend, ship</b><span>Fast or Careful. The frontier model or the cheap one. Tokens run out and deadlines are real.</span></li>
+<li class="gpanel"><b>Five years, 80 releases, one cat</b><span>Start at the kitchen table. Take the steady job, or go it alone and found a studio.</span></li>
+<li class="gpanel"><b>Every odd is shown</b><span>The game tells you what is likely, and that a sure thing can still fail.</span></li>
+</ul>
+</div></section>
+
+<section class="blk"><div class="wrap">
+<h2>From the game</h2>
+<p class="sx-swipe" aria-hidden="true">Swipe for more &rarr;</p>
+<ul class="sx-shots" tabindex="0" aria-label="Six screenshots from Ship It">
+<li><img src="/gray-area-interactive/shipit/media/plan-640.webp" srcset="/gray-area-interactive/shipit/media/plan-640.webp 640w, /gray-area-interactive/shipit/media/plan-1280.webp 1280w" sizes="(min-width:1100px) 340px, (min-width:700px) 46vw, 86vw" width="640" height="360" loading="lazy" decoding="async" alt="The plan screen: Fast, Careful or Custom, with the token and hour costs."><p>Plan the build: Fast, Careful or your own mix.</p></li>
+<li><img src="/gray-area-interactive/shipit/media/offers-640.webp" srcset="/gray-area-interactive/shipit/media/offers-640.webp 640w, /gray-area-interactive/shipit/media/offers-1280.webp 1280w" sizes="(min-width:1100px) 340px, (min-width:700px) 46vw, 86vw" width="640" height="360" loading="lazy" decoding="async" alt="The job board in the team office, with a sequel offer from Mrs Hale and a chatbot contract."><p>Pick your next job. Clients remember you.</p></li>
+<li><img src="/gray-area-interactive/shipit/media/reviews-640.webp" srcset="/gray-area-interactive/shipit/media/reviews-640.webp 640w, /gray-area-interactive/shipit/media/reviews-1280.webp 1280w" sizes="(min-width:1100px) 340px, (min-width:700px) 46vw, 86vw" width="640" height="360" loading="lazy" decoding="async" alt="A release result card with scores from four reviewers and a Front page mark."><p>Ship it, then meet the reviewers.</p></li>
+<li><img src="/gray-area-interactive/shipit/media/event-640.webp" srcset="/gray-area-interactive/shipit/media/event-640.webp 640w, /gray-area-interactive/shipit/media/event-1280.webp 1280w" sizes="(min-width:1100px) 340px, (min-width:700px) 46vw, 86vw" width="640" height="360" loading="lazy" decoding="async" alt="An event card: hunt a flaky test, or go home."><p>Flaky tests, outages and free-credit weeks.</p></li>
+<li><img src="/gray-area-interactive/shipit/media/year-640.webp" srcset="/gray-area-interactive/shipit/media/year-640.webp 640w, /gray-area-interactive/shipit/media/year-1280.webp 1280w" sizes="(min-width:1100px) 340px, (min-width:700px) 46vw, 86vw" width="640" height="360" loading="lazy" decoding="async" alt="The year review card, with the best release marked Viral."><p>Chase your first Viral release.</p></li>
+<li><img src="/gray-area-interactive/shipit/media/title-640.webp" srcset="/gray-area-interactive/shipit/media/title-640.webp 640w, /gray-area-interactive/shipit/media/title-1280.webp 1280w" sizes="(min-width:1100px) 340px, (min-width:700px) 46vw, 86vw" width="640" height="360" loading="lazy" decoding="async" alt="The start menu beside a pixel-art home office with a cat bed and a sofa."><p>It all starts at home.</p></li>
+</ul>
+</div></section>
+
+<section class="sx-end"><div class="wrap">
+<p class="sx-soon">Coming soon</p>
+<h2>Be there on launch day.</h2>
+<p>New teasers every week. No ads, no accounts, no data collected.</p>
+<div class="sx-cta">
+<a class="btn" href="https://www.instagram.com/shipitgame/" rel="noopener">Follow @shipitgame</a>
+<a class="btn-ghost" href="https://www.youtube.com/@shipitgame" rel="noopener">YouTube</a>
+</div>
+<div class="sx-small"><a href="/gray-area-interactive/shipit/privacy/">Privacy policy</a><a href="/gray-area-interactive/support/">Support</a></div>
+</div></section>
+</main>
+<script>
+(function(){var v=document.getElementById("teaser"),b=document.getElementById("pause");if(!v)return;
+var still=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function icon(p){b.innerHTML=p?'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>':'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';b.setAttribute("aria-label",p?"Play the teaser":"Pause the teaser")}
+b.hidden=false;
+b.onclick=function(){if(v.paused){v.play();icon(false)}else{v.pause();icon(true)}};
+if(still){icon(true);return}
+window.addEventListener("load",function(){v.preload="auto";var p=v.play();if(p&&p.catch)p.catch(function(){icon(true)});icon(false)});
+})();
+</script>
+<footer class="site-footer"><div class="wrap">
+<div>
+<div><a class="slot" href="/gray-area-interactive/" aria-label="Gray Area Interactive, home"><img src="/gray-area-interactive/assets/logo/logo-full.svg" width="260" height="63" alt="Gray Area Interactive"></a>
+<small>© 2026 Gray Area Interactive</small>
+<small>No trackers, no cookies, no analytics.</small>
+</div>
+<nav class="foot-links" aria-label="Footer"><a href="/gray-area-interactive/shipit/">Ship It</a><a href="/gray-area-interactive/support/">Support</a><a href="/gray-area-interactive/shipit/privacy/">Privacy</a><a href="https://github.com/Subrising/gray-area-interactive/issues">Support: GitHub issues</a><a href="https://davidzgray.com/?src=grayareainteractive">Made by David Gray</a></nav>
+</div></footer>
+</body>
+</html>
