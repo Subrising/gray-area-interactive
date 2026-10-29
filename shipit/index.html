@@ -87,6 +87,18 @@ section.blk h2{margin-bottom:16px}
 <h1>Ship It<small>AI Dev Tycoon</small></h1>
 <p class="sx-hook">Run a tiny dev studio from a kitchen table to the front page.</p>
 <p class="sx-sub">Plan the build. Spend the tokens. Ship it. Then find out if the reviewers call it a Flop or Viral.</p>
+<div id="waitlist" class="wl-wrap">
+<p class="wl-msg" id="joined" role="status">Almost done. Check your inbox and select the confirm link. Check spam if it is not there.</p>
+<p class="wl-msg" id="confirmed" role="status">You are on the list. We will email you once, when Ship It launches.</p>
+<form class="wl" action="https://app.kit.com/forms/10114351/subscriptions" method="post" aria-labelledby="wl-h1">
+<h2 class="wl-h" id="wl-h1">Join the waitlist</h2>
+<div class="wl-row"><label class="wl-lab" for="wl-email1">Email address</label>
+<input id="wl-email1" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+<button class="btn" type="submit">Join the waitlist</button></div>
+<p class="wl-note">One email when Ship It launches. Leave any time. <a href="/gray-area-interactive/shipit/privacy/#waitlist">How we use your email</a></p>
+<p class="wl-err" role="alert" hidden>Enter a full email address, such as you@example.com.</p>
+</form>
+</div>
 <div class="sx-cta">
 <a class="btn" href="https://www.instagram.com/shipitgame/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Follow @shipitgame</a>
 <a class="btn-ghost" href="https://www.youtube.com/@shipitgame" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>YouTube</a>
@@ -125,7 +137,15 @@ section.blk h2{margin-bottom:16px}
 <section class="sx-end"><div class="wrap">
 <p class="sx-soon">Coming soon</p>
 <h2>Be there on launch day.</h2>
-<p>New teasers every week. No ads, no accounts, no data collected.</p>
+<p>New teasers every week. The game has no ads, no accounts and no tracking.</p>
+<form class="wl" action="https://app.kit.com/forms/10114351/subscriptions" method="post" aria-labelledby="wl-h2">
+<h2 class="wl-h" id="wl-h2">Join the waitlist</h2>
+<div class="wl-row"><label class="wl-lab" for="wl-email2">Email address</label>
+<input id="wl-email2" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+<button class="btn" type="submit">Join the waitlist</button></div>
+<p class="wl-note">One email when Ship It launches. Leave any time. <a href="/gray-area-interactive/shipit/privacy/#waitlist">How we use your email</a></p>
+<p class="wl-err" role="alert" hidden>Enter a full email address, such as you@example.com.</p>
+</form>
 <div class="sx-cta">
 <a class="btn" href="https://www.instagram.com/shipitgame/" rel="noopener">Follow @shipitgame</a>
 <a class="btn-ghost" href="https://www.youtube.com/@shipitgame" rel="noopener">YouTube</a>
@@ -142,6 +162,11 @@ b.onclick=function(){if(v.paused){v.play();icon(false)}else{v.pause();icon(true)
 if(still){icon(true);return}
 window.addEventListener("load",function(){v.preload="auto";var p=v.play();if(p&&p.catch)p.catch(function(){icon(true)});icon(false)});
 })();
+</script>
+<script>
+(function(){document.querySelectorAll("form.wl").forEach(function(f,n){var i=f.querySelector("input"),e=f.querySelector(".wl-err");e.id="wl-err"+n;
+i.addEventListener("invalid",function(ev){ev.preventDefault();e.hidden=false;i.setAttribute("aria-invalid","true");i.setAttribute("aria-describedby",e.id)});
+i.addEventListener("input",function(){e.hidden=true;i.removeAttribute("aria-invalid")})})})();
 </script>
 <footer class="site-footer"><div class="wrap">
 <div>
